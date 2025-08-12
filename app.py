@@ -14,7 +14,7 @@ app = Flask(__name__)
 
 #### CONFIGURACION DE SQLALCHEMY ####
 app.app_context().push()
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://admg4:JQ32Fc8eG5CxmRLu5W4LyFovUJxvYQjJ@dpg-d2d9ioadbo4c73b7i4vg-a.oregon-postgres.render.com/mlg4_c0y3'
+app.config['SQLALCHEMY_DATABASE_URI'] = config('DATABASE_URL')
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
 ## CREAMOS LA TABLA HOUSING
